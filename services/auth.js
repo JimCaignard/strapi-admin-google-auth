@@ -29,13 +29,13 @@ const checkCredentials = async ({ email, password }) => {
   const user = await strapi.query('user', 'admin').findOne({ email });
 
   if (!user || !user.password) {
-    return [null, false, { message: 'Invalid credentials' }];
+    return [null, false, { message: 'boulaka' }];
   }
 
   const isValid = await validatePassword(password, user.password);
 
   if (!isValid) {
-    return [null, false, { message: 'Invalid credentials' }];
+    return [null, false, { message: 'boulaka' }];
   }
 
   if (!(user.isActive === true)) {
