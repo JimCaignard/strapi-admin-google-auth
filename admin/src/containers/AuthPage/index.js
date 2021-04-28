@@ -130,6 +130,11 @@ const AuthPage = ({ hasAdmin, setHasAdmin }) => {
     }
   };
 
+  const handleGoogleSubmit = async (props) => {
+    console.log('test google submit => ',props);
+    
+  }
+
   const forgotPasswordRequest = async (body, requestURL) => {
     try {
       await axios({
@@ -296,6 +301,7 @@ const AuthPage = ({ hasAdmin, setHasAdmin }) => {
           modifiedData={modifiedData}
           onChange={handleChange}
           onSubmit={handleSubmit}
+          onGoogleSubmit={handleGoogleSubmit}
           requestError={requestError}
         />
       </BaselineAlignment>
